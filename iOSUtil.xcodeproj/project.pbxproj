@@ -16,6 +16,7 @@
 		DB4D72BD20302F0000EB3F13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4D72BC20302F0000EB3F13 /* main.m */; };
 		DB4D72C720302F0000EB3F13 /* iOSUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4D72C620302F0000EB3F13 /* iOSUtilTests.m */; };
 		DB4D72D220302F0000EB3F13 /* iOSUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4D72D120302F0000EB3F13 /* iOSUtilUITests.m */; };
+		DBB402482030307700B175FF /* WYUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB402442030305500B175FF /* WYUtil.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = DB4D72A620302F0000EB3F13;
 			remoteInfo = iOSUtil;
+		};
+		DBB402432030305500B175FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBB4023F2030305400B175FF /* WYUtil.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DBB402342030305400B175FF;
+			remoteInfo = WYUtil;
+		};
+		DBB402452030306D00B175FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBB4023F2030305400B175FF /* WYUtil.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DBB402332030305400B175FF;
+			remoteInfo = WYUtil;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +68,7 @@
 		DB4D72CD20302F0000EB3F13 /* iOSUtilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUtilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4D72D120302F0000EB3F13 /* iOSUtilUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSUtilUITests.m; sourceTree = "<group>"; };
 		DB4D72D320302F0000EB3F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB4023F2030305400B175FF /* WYUtil.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WYUtil.xcodeproj; path = WYUtil/WYUtil.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB402482030307700B175FF /* WYUtil.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,10 +100,12 @@
 		DB4D729E20302F0000EB3F13 = {
 			isa = PBXGroup;
 			children = (
+				DBB4022920302FDB00B175FF /* thirdParty */,
 				DB4D72A920302F0000EB3F13 /* iOSUtil */,
 				DB4D72C520302F0000EB3F13 /* iOSUtilTests */,
 				DB4D72D020302F0000EB3F13 /* iOSUtilUITests */,
 				DB4D72A820302F0000EB3F13 /* Products */,
+				DBB402472030307700B175FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +154,29 @@
 			path = iOSUtilUITests;
 			sourceTree = "<group>";
 		};
+		DBB4022920302FDB00B175FF /* thirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				DBB4023F2030305400B175FF /* WYUtil.xcodeproj */,
+			);
+			name = thirdParty;
+			sourceTree = "<group>";
+		};
+		DBB402402030305400B175FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBB402442030305500B175FF /* WYUtil.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBB402472030307700B175FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +191,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DBB402462030306D00B175FF /* PBXTargetDependency */,
 			);
 			name = iOSUtil;
 			productName = iOSUtil;
@@ -227,6 +270,12 @@
 			mainGroup = DB4D729E20302F0000EB3F13;
 			productRefGroup = DB4D72A820302F0000EB3F13 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DBB402402030305400B175FF /* Products */;
+					ProjectRef = DBB4023F2030305400B175FF /* WYUtil.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DB4D72A620302F0000EB3F13 /* iOSUtil */,
@@ -235,6 +284,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DBB402442030305500B175FF /* WYUtil.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WYUtil.framework;
+			remoteRef = DBB402432030305500B175FF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DB4D72A520302F0000EB3F13 /* Resources */ = {
@@ -303,6 +362,11 @@
 			isa = PBXTargetDependency;
 			target = DB4D72A620302F0000EB3F13 /* iOSUtil */;
 			targetProxy = DB4D72CE20302F0000EB3F13 /* PBXContainerItemProxy */;
+		};
+		DBB402462030306D00B175FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WYUtil;
+			targetProxy = DBB402452030306D00B175FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
