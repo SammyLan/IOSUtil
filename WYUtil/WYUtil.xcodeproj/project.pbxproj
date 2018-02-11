@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		DBB402392030305400B175FF /* WYUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB402372030305400B175FF /* WYUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBB4024C2030311200B175FF /* NSObject+WYHook.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB4024A2030311200B175FF /* NSObject+WYHook.m */; };
+		DBB4024D2030311200B175FF /* NSObject+WYHook.h in Headers */ = {isa = PBXBuildFile; fileRef = DBB4024B2030311200B175FF /* NSObject+WYHook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBB402342030305400B175FF /* WYUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WYUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB402372030305400B175FF /* WYUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYUtil.h; sourceTree = "<group>"; };
 		DBB402382030305400B175FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB4024A2030311200B175FF /* NSObject+WYHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WYHook.m"; sourceTree = "<group>"; };
+		DBB4024B2030311200B175FF /* NSObject+WYHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WYHook.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,7 @@
 		DBB4022A2030305400B175FF = {
 			isa = PBXGroup;
 			children = (
+				DBB40249203030C200B175FF /* Util */,
 				DBB402362030305400B175FF /* WYUtil */,
 				DBB402352030305400B175FF /* Products */,
 			);
@@ -52,6 +57,15 @@
 			path = WYUtil;
 			sourceTree = "<group>";
 		};
+		DBB40249203030C200B175FF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DBB4024B2030311200B175FF /* NSObject+WYHook.h */,
+				DBB4024A2030311200B175FF /* NSObject+WYHook.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -60,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB402392030305400B175FF /* WYUtil.h in Headers */,
+				DBB4024D2030311200B175FF /* NSObject+WYHook.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB4024C2030311200B175FF /* NSObject+WYHook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <WYUtil/NSObject+WYHOOK.h>
 
 @interface ViewController ()
 
@@ -14,9 +15,25 @@
 
 @implementation ViewController
 
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self replaceSelector:@selector(description) bySelector:@selector(descriptionHook)];
+    });
+}
+
+-(NSString*) descriptionHook{
+    return [[self descriptionHook] stringByAppendingString:@"--Hook"];
+}
+
+-(NSString*) description{
+    return @"ViewController";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"descriptionHook:%@",self);
 }
 
 
